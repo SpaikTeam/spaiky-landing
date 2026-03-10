@@ -12,7 +12,7 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://spaiky.app";
+const SITE_URL = "https://spaik.app";
 const TITLE = "Spaiky - Learn AI the Fun Way";
 const DESCRIPTION =
   "Spaiky turns AI into a game. Short lessons on prompting, machine learning, and more. Five minutes a day, no tech background needed.";
