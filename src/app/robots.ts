@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://spaik.app/sitemap.xml",
+    sitemap: "https://spaiky.app/sitemap.xml",
   };
 }
