@@ -409,9 +409,9 @@ export default function Home() {
             <span>&copy; {new Date().getFullYear()}</span>
           </div>
           <div className="flex gap-6">
-            <a href="#" className="transition-colors hover:text-white">Privacy</a>
+            <a href="/privacy" className="transition-colors hover:text-white">Privacy</a>
             <a href="#" className="transition-colors hover:text-white">Terms</a>
-            <a href="#" className="transition-colors hover:text-white">Contact</a>
+            <a href="mailto:contact@spaiky.app" className="transition-colors hover:text-white">Contact</a>
           </div>
         </div>
       </footer>
