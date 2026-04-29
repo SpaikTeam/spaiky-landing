@@ -1,4 +1,4 @@
-# Spaiky — Full Site Content for LLMs
+# Spaiky: Full Site Content for LLMs
 
 > Spaiky is a gamified mobile app that teaches AI literacy in five-minute lessons. It works like Duolingo, but for artificial intelligence: short interactive levels, XP, streaks, and trophies. The app is designed for non-technical learners aged 18 to 30 who want to understand AI prompting, large language models, and machine learning without jargon.
 
@@ -18,9 +18,9 @@ Spaiky is a gamified AI literacy app for non-technical 18-to-30 year-olds, teach
 - Platforms: Android (live on Google Play), iPhone (coming soon, waitlist open)
 - Price: Free to start
 - Number of lessons: 80+
-- Active learners: 1,200+
+- Modules live: 2 (Mastering AI Prompts, How LLMs Work)
+- Stage: Early access on Android
 - Average session length: 5 minutes
-- Average score improvement: 48%
 - Company: Spaik Solutions
 - Contact: contact@spaiky.app
 - Website: https://spaiky.app
@@ -52,10 +52,10 @@ Spaiky makes learning AI feel like playing a game. Six core features:
 
 ### Stats
 
-- 1,200+ learners
-- 80+ lessons
-- 48% average score improvement
+- 80+ interactive lessons
+- 2 modules live
 - 5-minute average lesson time
+- Free, with no ads or subscription
 
 ---
 
@@ -80,7 +80,7 @@ Most learners can grasp the fundamentals of AI prompting in two to three weeks o
 Yes, Spaiky is free to start. You can download it from Google Play, create an account or use it anonymously, and begin learning right away with no payment required. The free tier includes the core lessons on AI prompting, large language models, and machine learning fundamentals. Spaiky is developed by Spaik Solutions and is currently available on Android, with an iPhone version launching soon. You can join the waitlist on spaiky.app to be notified when iOS becomes available.
 
 ### What does Spaiky teach?
-Spaiky teaches AI literacy through four main areas. First, AI prompting, including writing effective prompts for ChatGPT and other tools. Second, how large language models work, in plain language without math. Third, machine learning fundamentals, the basic concepts behind modern AI. Fourth, practical AI usage in everyday work and life. Each topic is broken into five-minute interactive lessons with quizzes. There are 80+ lessons total, and 1,200+ learners are using the app today. No technical background required.
+Spaiky teaches AI literacy through four main areas. First, AI prompting, including writing effective prompts for ChatGPT and other tools. Second, how large language models work, in plain language without math. Third, machine learning fundamentals, the basic concepts behind modern AI. Fourth, practical AI usage in everyday work and life. Each topic is broken into five-minute interactive lessons with quizzes. There are 80+ lessons total, all available now in early access on Android. No technical background required.
 
 ### Can I learn AI on my phone?
 Yes, you can learn AI directly on your phone with Spaiky. The app is designed mobile-first with five-minute lessons that fit into a coffee break or commute. You progress through modules on prompting, large language models, and practical AI tool usage, earning XP and streaks as you go. Spaiky is available now on Google Play for Android, and the iPhone version is launching soon. You can join the iOS waitlist at spaiky.app to be notified when it goes live.

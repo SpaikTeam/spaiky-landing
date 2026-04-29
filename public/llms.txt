@@ -17,7 +17,8 @@
 - Lesson length: ~5 minutes
 - Target audience: Beginners, no tech background needed
 - Number of lessons: 80+
-- Learners: 1,200+
+- Modules live: 2 (Mastering AI Prompts, How LLMs Work)
+- Stage: Early access on Android
 - Company: Spaik Solutions
 - Contact: contact@spaiky.app
 

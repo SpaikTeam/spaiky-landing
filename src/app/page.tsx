@@ -1,7 +1,6 @@
 import MascotImage from "@/components/MascotImage";
 import SmartCTA from "@/components/SmartCTA";
 import SectionReveal from "@/components/SectionReveal";
-import AnimCounter from "@/components/AnimCounter";
 
 /* ─── JSON-LD ─────────────────────────────────────────────────── */
 
@@ -34,12 +33,6 @@ const jsonLd = {
     price: "0",
     priceCurrency: "USD",
     availability: "https://schema.org/InStock",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.8",
-    ratingCount: "1200",
-    bestRating: "5",
   },
   audience: {
     "@type": "Audience",
@@ -81,7 +74,7 @@ const FAQS = [
   },
   {
     q: "What does Spaiky teach?",
-    a: "Spaiky teaches AI literacy through four main areas. First, AI prompting, including writing effective prompts for ChatGPT and other tools. Second, how large language models work, in plain language without math. Third, machine learning fundamentals, the basic concepts behind modern AI. Fourth, practical AI usage in everyday work and life. Each topic is broken into five-minute interactive lessons with quizzes. There are 80+ lessons total, and 1,200+ learners are using the app today. No technical background required.",
+    a: "Spaiky teaches AI literacy through four main areas. First, AI prompting, including writing effective prompts for ChatGPT and other tools. Second, how large language models work, in plain language without math. Third, machine learning fundamentals, the basic concepts behind modern AI. Fourth, practical AI usage in everyday work and life. Each topic is broken into five-minute interactive lessons with quizzes. There are 80+ lessons total, all available now in early access on Android. No technical background required.",
   },
   {
     q: "Can I learn AI on my phone?",
@@ -143,34 +136,37 @@ const FEATURES = [
   },
 ] as const;
 
-const STATS = [
-  { target: 1200, suffix: "+", label: "Learners", color: "purple" },
-  { target: 80, suffix: "+", label: "Lessons", color: "green" },
-  { target: 48, suffix: "%", label: "Avg. score improvement", color: "pink" },
-  { target: 5, suffix: " min", label: "Average lesson time", color: "gold" },
-] as const;
+type Stat = {
+  value: string;
+  label: string;
+  color: "purple" | "green" | "pink" | "gold";
+};
 
-const TESTIMONIALS = [
+const STATS: readonly Stat[] = [
+  { value: "80+", label: "Interactive lessons", color: "purple" },
+  { value: "2", label: "Modules live", color: "green" },
+  { value: "5 min", label: "Average lesson time", color: "pink" },
+  { value: "Free", label: "No ads, no subscription", color: "gold" },
+];
+
+const MODULES = [
   {
-    emoji: "👩‍💻",
-    name: "Emma L.",
-    role: "Marketing Student",
-    quote:
-      "Went from zero AI knowledge to using ChatGPT like a pro at my internship. The streak feature? Genuinely addictive.",
+    emoji: "💬",
+    title: "Mastering AI Prompts",
+    desc: "Write prompts that actually work. Learn context-setting, role-prompting, and iteration techniques used by power users of ChatGPT and Claude.",
+    badge: "Live",
   },
   {
-    emoji: "🧑‍🎓",
-    name: "James R.",
-    role: "Business Analyst",
-    quote:
-      "First AI course I've tried that doesn't feel like a lecture. I actually look forward to opening it in the morning.",
+    emoji: "🧠",
+    title: "How LLMs Work",
+    desc: "What is actually happening inside ChatGPT? Plain-English explanations of tokens, training, and why AI sometimes makes things up. No math required.",
+    badge: "Live",
   },
   {
-    emoji: "👨‍🔬",
-    name: "Priya S.",
-    role: "Junior Developer",
-    quote:
-      "The prompting module alone saved me hours at work. Going for Platinum on the trophies next.",
+    emoji: "⚖️",
+    title: "AI in the Real World",
+    desc: "Use AI at work, in school, and in daily life. Practical workflows, ethical guardrails, and the basics of what the EU AI Act means for you.",
+    badge: "Coming soon",
   },
 ] as const;
 
@@ -274,7 +270,7 @@ export default function Home() {
               <SmartCTA size="large" className="mb-8" />
 
               <div className="flex flex-wrap justify-center gap-6 text-sm text-text-muted lg:justify-start">
-                <span>👥 <strong className="text-white">1,200+</strong> learners</span>
+                <span>🚀 <strong className="text-white">Early access</strong> on Android</span>
                 <span>🤖 <strong className="text-white">80+</strong> lessons</span>
                 <span>🎉 <strong className="text-white">100%</strong> free to start</span>
               </div>
@@ -397,11 +393,11 @@ export default function Home() {
             {STATS.map((s) => (
               <SectionReveal key={s.label}>
                 <div>
-                  <AnimCounter
-                    target={s.target}
-                    suffix={s.suffix}
+                  <span
                     className={`font-heading text-4xl font-bold sm:text-5xl ${STAT_COLOR[s.color]}`}
-                  />
+                  >
+                    {s.value}
+                  </span>
                   <p className="mt-2 text-sm text-text-muted">{s.label}</p>
                 </div>
               </SectionReveal>
@@ -409,34 +405,42 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── TESTIMONIALS ───────────────────────────────────── */}
+        {/* ── WHAT'S INSIDE ──────────────────────────────────── */}
         <section id="testimonials" className="px-5 py-20 lg:py-28">
           <div className="mx-auto max-w-6xl">
             <SectionReveal className="mb-14 flex flex-col items-center text-center">
               <span className="mb-2 text-xs font-bold tracking-widest text-gold uppercase">
-                What learners say
+                What&apos;s inside
               </span>
               <h2 className="max-w-md font-heading text-3xl font-bold sm:text-4xl">
-                Hear it from actual learners
+                Real lessons, ready to learn now
               </h2>
             </SectionReveal>
 
             <div className="grid gap-5 md:grid-cols-3">
-              {TESTIMONIALS.map((t, i) => (
-                <SectionReveal key={t.name} delay={i * 0.1}>
+              {MODULES.map((m, i) => (
+                <SectionReveal key={m.title} delay={i * 0.1}>
                   <div className="flex h-full flex-col rounded-2xl border border-white/5 bg-card p-6">
-                    <p className="mb-6 flex-1 text-text-muted italic leading-relaxed">
-                      &ldquo;{t.quote}&rdquo;
-                    </p>
-                    <div className="flex items-center gap-3">
+                    <div className="mb-4 flex items-center justify-between">
                       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-purple to-pink text-lg">
-                        {t.emoji}
+                        {m.emoji}
                       </div>
-                      <div>
-                        <p className="text-sm font-semibold text-white">{t.name}</p>
-                        <p className="text-xs text-text-muted">{t.role}</p>
-                      </div>
+                      <span
+                        className={`rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider ${
+                          m.badge === "Live"
+                            ? "bg-green/15 text-green-light"
+                            : "bg-white/5 text-text-muted"
+                        }`}
+                      >
+                        {m.badge}
+                      </span>
                     </div>
+                    <h3 className="mb-2 font-heading text-lg font-bold text-white">
+                      {m.title}
+                    </h3>
+                    <p className="flex-1 text-sm leading-relaxed text-text-muted">
+                      {m.desc}
+                    </p>
                   </div>
                 </SectionReveal>
               ))}
@@ -486,8 +490,8 @@ export default function Home() {
                 Ready to speak AI?
               </h2>
               <p className="mx-auto mb-8 max-w-md text-text-muted leading-relaxed">
-                1,200+ people are already learning with Spaiky. Get in and start your first
-                lesson today.
+                Spaiky is in early access on Android. Be one of the first to learn AI
+                the fun way.
               </p>
               <SmartCTA size="large" className="mx-auto" />
             </div>
