@@ -70,11 +70,11 @@ const FAQS = [
   },
   {
     q: "Is Spaiky free to use?",
-    a: "Yes, Spaiky is free to start. You can download it from Google Play, create an account or use it anonymously, and begin learning right away with no payment required. The free tier includes the core lessons on AI prompting, large language models, and machine learning fundamentals. Spaiky is developed by Spaik Solutions and is currently available on Android, with an iPhone version launching soon. You can join the waitlist on spaiky.app to be notified when iOS becomes available.",
+    a: "Yes, Spaiky is free to start. You can download it from Google Play, create an account or use it anonymously, and begin learning right away with no payment required. The free tier includes the core lessons on AI prompting, large language models, and machine learning fundamentals. Spaiky is currently available on Android, with an iPhone version launching soon. You can join the waitlist on spaiky.app to be notified when iOS becomes available.",
   },
   {
     q: "What does Spaiky teach?",
-    a: "Spaiky teaches AI literacy through four main areas. First, AI prompting, including writing effective prompts for ChatGPT and other tools. Second, how large language models work, in plain language without math. Third, machine learning fundamentals, the basic concepts behind modern AI. Fourth, practical AI usage in everyday work and life. Each topic is broken into five-minute interactive lessons with quizzes. There are 80+ lessons total, all available now in early access on Android. No technical background required.",
+    a: "Spaiky teaches AI literacy through four main areas. First, AI prompting, including writing effective prompts for ChatGPT and other tools. Second, how large language models work, in plain language without math. Third, machine learning fundamentals, the basic concepts behind modern AI. Fourth, practical AI usage in everyday work and life. Each topic is broken into five-minute interactive lessons with quizzes. There are 80+ interactive lessons across the live modules, with more being added regularly. No technical background required.",
   },
   {
     q: "Can I learn AI on my phone?",
@@ -163,9 +163,9 @@ const MODULES = [
     badge: "Live",
   },
   {
-    emoji: "⚖️",
-    title: "AI in the Real World",
-    desc: "Use AI at work, in school, and in daily life. Practical workflows, ethical guardrails, and the basics of what the EU AI Act means for you.",
+    emoji: "✨",
+    title: "AI for Everyday Life",
+    desc: "Use AI to write better, learn faster, and save time at work or school. Practical workflows, real examples, no theory dumps. Get the most out of the AI tools you already have access to.",
     badge: "Coming soon",
   },
 ] as const;
@@ -228,7 +228,7 @@ export default function Home() {
           <div className="hidden items-center gap-8 text-sm text-text-muted md:flex">
             <a href="#features" className="transition-colors hover:text-white">Features</a>
             <a href="#how-it-works" className="transition-colors hover:text-white">How It Works</a>
-            <a href="#testimonials" className="transition-colors hover:text-white">Testimonials</a>
+            <a href="#whats-inside" className="transition-colors hover:text-white">What&apos;s inside</a>
             <a href="#faq" className="transition-colors hover:text-white">FAQ</a>
           </div>
 
@@ -406,7 +406,7 @@ export default function Home() {
         </section>
 
         {/* ── WHAT'S INSIDE ──────────────────────────────────── */}
-        <section id="testimonials" className="px-5 py-20 lg:py-28">
+        <section id="whats-inside" className="px-5 py-20 lg:py-28">
           <div className="mx-auto max-w-6xl">
             <SectionReveal className="mb-14 flex flex-col items-center text-center">
               <span className="mb-2 text-xs font-bold tracking-widest text-gold uppercase">
