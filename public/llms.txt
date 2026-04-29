@@ -1,0 +1,59 @@
+# Spaiky
+
+> Spaiky is a gamified mobile app that teaches AI literacy in five-minute lessons. It works like Duolingo, but for artificial intelligence: short interactive levels, XP, streaks, and trophies. The app is designed for non-technical learners aged 18 to 30 who want to understand AI prompting, large language models, and machine learning without jargon.
+
+## What Spaiky teaches
+
+- AI prompting and prompt engineering
+- How large language models (LLMs) work
+- Practical use of ChatGPT and other AI tools
+- Machine learning fundamentals (no math required)
+- Responsible and effective AI usage
+
+## Key facts
+
+- Platform: Android (live on Google Play), iPhone coming soon
+- Pricing: Free to start
+- Lesson length: ~5 minutes
+- Target audience: Beginners, no tech background needed
+- Number of lessons: 80+
+- Learners: 1,200+
+- Company: Spaik Solutions
+- Contact: contact@spaiky.app
+
+## Pages
+
+- [Homepage](https://spaiky.app/): Main landing page with overview, features, and waitlist signup
+- [Privacy Policy](https://spaiky.app/privacy): How we collect, use, and protect user data
+- [Delete Account](https://spaiky.app/delete-account): How users can request deletion of their account and data
+
+## How to access Spaiky
+
+- Android users can download the app directly from Google Play: https://play.google.com/store/apps/details?id=com.spaiky.app
+- iPhone users can join the waitlist on the homepage to be notified when the iOS version launches
+
+## Frequently asked questions
+
+**What is Spaiky?**
+Spaiky is a mobile app that teaches AI in short, gamified lessons. Think Duolingo, but for AI literacy.
+
+**Who is Spaiky for?**
+Anyone aged 18 to 30 who wants to learn about AI without a technical background. No coding or math required.
+
+**Is Spaiky free?**
+Yes, Spaiky is free to start.
+
+**How long are the lessons?**
+About 5 minutes each. They're designed to fit into a coffee break or commute.
+
+**What does Spaiky teach?**
+AI prompting, how large language models work, practical use of ChatGPT, and machine learning fundamentals.
+
+**Is Spaiky available on iPhone?**
+Not yet. The iOS version is coming soon. iPhone users can join the waitlist on the homepage.
+
+**Is Spaiky available on Android?**
+Yes, Spaiky is live on Google Play.
+
+**Who makes Spaiky?**
+Spaiky is developed by Spaik Solutions.
