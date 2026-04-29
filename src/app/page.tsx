@@ -174,8 +174,6 @@ const TESTIMONIALS = [
   },
 ] as const;
 
-const PRESS = ["TechCrunch", "Product Hunt", "The Verge", "Wired", "Fast Company"];
-
 /* ─── COLOR MAPS ──────────────────────────────────────────────── */
 
 const ICON_BG: Record<string, string> = {
@@ -286,20 +284,6 @@ export default function Home() {
             <div className="hidden justify-center lg:flex">
               <PhoneMockup />
             </div>
-          </div>
-        </section>
-
-        {/* ── SOCIAL PROOF STRIP ─────────────────────────────── */}
-        <section className="border-y border-purple/20">
-          <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-8 px-5 py-5 md:gap-12">
-            <span className="text-xs font-semibold tracking-widest text-text-muted uppercase">
-              Featured in
-            </span>
-            {PRESS.map((name) => (
-              <span key={name} className="font-heading text-lg font-bold text-white/40 select-none md:text-xl">
-                {name}
-              </span>
-            ))}
           </div>
         </section>
 
