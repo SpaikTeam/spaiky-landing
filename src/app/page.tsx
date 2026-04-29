@@ -27,6 +27,54 @@ const jsonLd = {
   },
 };
 
+const FAQS = [
+  {
+    q: "What is Spaiky?",
+    a: "Spaiky is a mobile app that teaches AI in short, gamified lessons. Think of it like Duolingo, but for AI literacy. You learn prompting, how large language models work, and practical AI skills in five-minute sessions.",
+  },
+  {
+    q: "Who is Spaiky for?",
+    a: "Spaiky is built for anyone aged 18 to 30 who wants to learn about AI without a technical background. No coding, no math, no jargon. Just clear lessons designed for curious beginners.",
+  },
+  {
+    q: "Is Spaiky free?",
+    a: "Yes, Spaiky is free to start. You can begin learning right away without paying.",
+  },
+  {
+    q: "How long are the lessons?",
+    a: "Each lesson takes about 5 minutes. They're designed to fit into a coffee break, a commute, or any small gap in your day.",
+  },
+  {
+    q: "What does Spaiky teach?",
+    a: "Spaiky covers AI prompting, how large language models like ChatGPT work, machine learning fundamentals, and how to use AI tools effectively in everyday life.",
+  },
+  {
+    q: "Is Spaiky available on iPhone?",
+    a: "Not yet. The iOS version is coming soon. iPhone users can join the waitlist on the homepage to be notified when it launches.",
+  },
+  {
+    q: "Is Spaiky available on Android?",
+    a: "Yes. Spaiky is live on Google Play and you can download it directly to your Android phone.",
+  },
+  {
+    q: "Who makes Spaiky?",
+    a: "Spaiky is developed by Spaik Solutions. You can reach the team at contact@spaiky.app.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map(({ q, a }) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: a,
+    },
+  })),
+};
+
 /* ─── DATA ────────────────────────────────────────────────────── */
 
 const FEATURES = [
@@ -143,6 +191,10 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
 
       {/* ── STICKY NAV ───────────────────────────────────────── */}
       <nav className="sticky top-0 z-50 border-b border-white/5 bg-background/80 backdrop-blur-lg">
@@ -156,6 +208,7 @@ export default function Home() {
             <a href="#features" className="transition-colors hover:text-white">Features</a>
             <a href="#how-it-works" className="transition-colors hover:text-white">How It Works</a>
             <a href="#testimonials" className="transition-colors hover:text-white">Testimonials</a>
+            <a href="#faq" className="transition-colors hover:text-white">FAQ</a>
           </div>
 
           <a
@@ -374,6 +427,37 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
+                </SectionReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── FAQ ───────────────────────────────────────────── */}
+        <section id="faq" className="px-5 py-20 lg:py-28">
+          <div className="mx-auto max-w-3xl">
+            <SectionReveal>
+              <p className="mb-3 text-center text-xs font-bold uppercase tracking-widest text-purple-light">
+                FAQ
+              </p>
+              <h2 className="mb-12 text-center font-heading text-3xl font-bold sm:text-4xl">
+                Questions, answered
+              </h2>
+            </SectionReveal>
+            <div className="flex flex-col gap-3">
+              {FAQS.map((item, i) => (
+                <SectionReveal key={i} delay={i * 0.04}>
+                  <details className="group rounded-2xl border border-white/5 bg-card/60 p-5 transition-colors hover:border-purple/30">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-heading text-lg font-semibold text-white">
+                      <span>{item.q}</span>
+                      <span className="shrink-0 text-purple-light transition-transform group-open:rotate-45">
+                        +
+                      </span>
+                    </summary>
+                    <p className="mt-3 leading-relaxed text-text-muted">
+                      {item.a}
+                    </p>
+                  </details>
                 </SectionReveal>
               ))}
             </div>

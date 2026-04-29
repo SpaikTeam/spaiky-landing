@@ -64,6 +64,33 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Spaiky",
+  legalName: "Spaik Solutions",
+  url: SITE_URL,
+  logo: `${SITE_URL}/mascots/hero.png`,
+  description: DESCRIPTION,
+  email: "contact@spaiky.app",
+  sameAs: [
+    "https://play.google.com/store/apps/details?id=com.spaiky.app",
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Spaiky",
+  url: SITE_URL,
+  description: DESCRIPTION,
+  inLanguage: "en",
+  publisher: {
+    "@type": "Organization",
+    name: "Spaik Solutions",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -71,6 +98,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
       <body className={`${fredoka.variable} ${dmSans.variable} antialiased`}>
         {children}
       </body>
