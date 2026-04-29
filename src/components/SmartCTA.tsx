@@ -53,7 +53,9 @@ export default function SmartCTA({ size = "large", className = "" }: SmartCTAPro
           🤖 Android
         </p>
         <a
-          href="#"
+          href="https://play.google.com/store/apps/details?id=com.spaiky.app"
+          target="_blank"
+          rel="noopener noreferrer"
           className={`inline-flex items-center gap-3 rounded-xl bg-black border border-white/15 transition-all duration-200 hover:border-purple hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(124,58,237,0.3)] ${isLarge ? "px-6 py-3.5" : "px-4 py-2.5"}`}
           aria-label="Get it on Google Play"
         >
